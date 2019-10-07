@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GradesAssistant" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ome-2c-i2g">
+                                <rect key="frame" x="140" y="623" width="95" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="3Ic-Dc-pUJ"/>
+                                </constraints>
+                                <state key="normal" image="mic">
+                                    <color key="titleShadowColor" red="0.39645629960000001" green="0.29341922259999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="record:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WXe-Fe-3yv"/>
+                                </connections>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VFw-Gw-vjH">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                                <items>
+                                    <navigationItem title="Grades Assistant" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="always" id="SfX-P8-KFt"/>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6DL-Tv-x3l">
+                                <rect key="frame" x="0.0" y="96" width="375" height="527"/>
+                                <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="1" alpha="0.99315068490000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="separatorColor" red="0.97254901959999995" green="0.97254901959999995" blue="1" alpha="0.99315068490000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="1" alpha="0.99315068490000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="p4d-PS-fzY"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="3dI-g3-Lma"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="1" alpha="0.99315068493150682" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ome-2c-i2g" secondAttribute="trailing" constant="140" id="08Q-qb-ClC"/>
+                            <constraint firstItem="Ome-2c-i2g" firstAttribute="top" secondItem="6DL-Tv-x3l" secondAttribute="bottom" id="7w9-I3-0n3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ome-2c-i2g" secondAttribute="bottom" id="Fhy-0k-9ay"/>
+                            <constraint firstItem="VFw-Gw-vjH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Fj8-iZ-M6R"/>
+                            <constraint firstItem="6DL-Tv-x3l" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="HaQ-Hc-eOy"/>
+                            <constraint firstItem="VFw-Gw-vjH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Hd1-ra-4f8"/>
+                            <constraint firstItem="VFw-Gw-vjH" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="LMy-xu-Whg"/>
+                            <constraint firstItem="6DL-Tv-x3l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jgW-lX-ayx"/>
+                            <constraint firstItem="6DL-Tv-x3l" firstAttribute="top" secondItem="VFw-Gw-vjH" secondAttribute="bottom" id="smn-bu-Klr"/>
+                            <constraint firstItem="Ome-2c-i2g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="140" id="xI2-sY-X3n"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="AssistantTableView" destination="6DL-Tv-x3l" id="WcC-U8-WqA"/>
+                        <outlet property="recordButton" destination="Ome-2c-i2g" id="uhu-Gm-Xh2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="117.39130434782609"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="mic" width="300" height="429"/>
+    </resources>
+</document>
